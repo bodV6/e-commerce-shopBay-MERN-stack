@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState(false);
+    const handleLogin = (e) => console.log("login")
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-16 sm:px-6 lg:px-8">
       <div className=" sm:mx-auto sm:w-full sm:max-w-md">
@@ -83,7 +84,7 @@ const Login = () => {
                           </div>
                       </div>
                       <div>
-                          <button type="submit" className=" group flex justify-center relative w-full h-[40px] bg-blue-600 text-white text-sm font-medium py-2 px-4 border border-transparent rounded-md hover:bg-blue-700" > Login</button>
+                          <button onClick={handleLogin} type="submit" className=" group flex justify-center relative w-full h-[40px] bg-blue-600 text-white text-sm font-medium py-2 px-4 border border-transparent rounded-md hover:bg-blue-700" > Login</button>
                       </div>
                       <div className={`${styles.normalFlex}w-full`}>
                           <h4>Not have any account?</h4>
